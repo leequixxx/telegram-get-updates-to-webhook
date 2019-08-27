@@ -1,0 +1,10 @@
+{
+  "name": "telegram-get-updates-to-webhook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "set-interval-async": "^1.0.26"
+  }
+}
