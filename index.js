@@ -7,7 +7,7 @@ const config = nconf.file({ file: 'config.json' });
 let lastUpdateId = 0;
 
 setIntervalAsync(async () => {
-  const { data } = await axios.get(`https://api.telegram.org/${config.get('bot:token')}/getUpdates?offset=${lastUpdateId}`);
+  const { data } = await axios.get(`https://api.telegram.org/bot${config.get('bot:token')}/getUpdates?offset=${lastUpdateId}`);
   data.result.forEach(async (update) => {
     lastUpdateId = update.update_id;
     lastUpdateId++;
